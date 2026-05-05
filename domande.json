@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "domanda": "Quale di questi è un piatto tipico della cucina iraniana?",
+    "opzioni": ["Ghormeh Sabzi", "Pad Thai", "Moussaka", "Pierogi"],
+    "corretta": "Ghormeh Sabzi"
+  },
+  {
+    "id": 2,
+    "domanda": "Nel romanzo di Pepe Carvalho, cosa brucia il detective come combustibile?",
+    "opzioni": ["Libri", "Mobili", "Lettere", "Quadri"],
+    "corretta": "Libri"
+  },
+  {
+    "id": 3,
+    "domanda": "La Bouillabaisse è una zuppa di pesce tipica di quale città francese?",
+    "opzioni": ["Marsiglia", "Lione", "Bordeaux", "Nizza"],
+    "corretta": "Marsiglia"
+  },
+  {
+    "id": 4,
+    "domanda": "In quale romanzo di Agatha Christie compare per la prima volta Hercule Poirot?",
+    "opzioni": ["Poirot a Styles Court", "Morte sul Nilo", "Dieci Piccoli Indiani", "Il Caso Proctor"],
+    "corretta": "Poirot a Styles Court"
+  },
+  {
+    "id": 5,
+    "domanda": "Il Ceviche è un piatto a base di pesce crudo marinato tipico di quale paese?",
+    "opzioni": ["Perù", "Messico", "Brasile", "Argentina"],
+    "corretta": "Perù"
+  },
+  {
+    "id": 6,
+    "domanda": "Quale spezia, ricavata dagli stigmi di un fiore, è la più cara al mondo?",
+    "opzioni": ["Zafferano", "Vaniglia", "Cardamomo", "Pepe lungo"],
+    "corretta": "Zafferano"
+  },
+  {
+    "id": 7,
+    "domanda": "Nel romanzo 'Il nome della rosa' di Umberto Eco, qual è il veleno utilizzato per uccidere le vittime?",
+    "opzioni": ["Arsenico sul libro", "Cianuro nel vino", "Belladonna nel pane", "Mercurio nell'inchiostro"],
+    "corretta": "Arsenico sul libro"
+  },
+  {
+    "id": 8,
+    "domanda": "Il Mole Poblano, salsa tipica messicana, contiene un ingrediente insolito. Quale?",
+    "opzioni": ["Cioccolato", "Caffè", "Vaniglia", "Cannella"],
+    "corretta": "Cioccolato"
+  },
+  {
+    "id": 9,
+    "domanda": "In quale paese è originaria la ricetta del Coq au Vin?",
+    "opzioni": ["Francia", "Belgio", "Svizzera", "Italia"],
+    "corretta": "Francia"
+  },
+  {
+    "id": 10,
+    "domanda": "Quale veleno, estratto da un fungo, viene citato in molti romanzi gialli classici?",
+    "opzioni": ["Amatossina", "Stricnina", "Curaro", "Digitale"],
+    "corretta": "Amatossina"
+  }
+]
