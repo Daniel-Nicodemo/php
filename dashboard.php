@@ -78,8 +78,95 @@ $etichette = [
         <section class="prove">
             <h2>🍽️ Prove Gastronomiche</h2>
             <div class="grid">
+                        <!-- antipasto sempre visibile -->
+                        <div class="clue-card">
 
-                
+                        <!-- se nell'array trova prova superata allora va avanti-->
+                        <?php if(in_array('antipasto', $sbloccati)): ?>
+
+                        <h3>Antipasto</h3>
+                        <p>Prova superata</p>
+
+                        <?php else: ?>
+
+                            <h3>Antipasto</h3>
+                            <p>Affronta il primo enigma gastronomico</p>
+                            <a href="quiz.php?portata=antipasto">Inizia la prova</a>
+
+                        <?php endif; ?>
+
+                        </div>
+
+                        <!-- Primo: visibile solo dopo antipasto -->
+
+                    <?php if(in_array('antipasto', $sbloccati)): ?>
+
+                        <div class="clue-card">
+
+                        <?php if(in_array('primo', $sbloccati)): ?>
+
+                        <h3>Primo piatto</h3>
+                        <p>Prova superata</p>
+
+                        <?php else: ?>
+
+                            <h3>Primo piatto</h3>
+                            <p>il secondo enigma ti attende</p>
+                            <a href="quiz.php?portata=primo">Inizia la prova</a>
+
+                        <?php endif; ?>
+
+                        </div>
+
+                        <?php endif; ?>
+
+                        <!-- Secondo: visibile solo dopo il primo -->
+
+                        <?php if(in_array('primo', $sbloccati)): ?>
+
+                        <div class="clue-card">
+
+                        <?php if(in_array('secondo', $sbloccati)): ?>
+
+                        <h3>Secondo piatto</h3>
+                        <p>Prova superata</p>
+
+                        <?php else: ?>
+
+                            <h3>Secondo piatto</h3>
+                            <p>il terzo enigma ti attende</p>
+                            <a href="quiz.php?portata=secondo">Inizia la prova</a>
+
+                        <?php endif; ?>
+
+                        </div>
+
+                        <?php endif; ?>
+
+                        <!-- Dolce: visibile solo dopo il secondo -->
+
+                        <!-- Secondo: visibile solo dopo il primo -->
+
+                        <?php if(in_array('secondo', $sbloccati)): ?>
+
+                        <div class="clue-card">
+
+                        <?php if(in_array('dolce', $sbloccati)): ?>
+
+                        <h3>Dolce</h3>
+                        <p>Prova superata</p>
+
+                        <?php else: ?>
+
+                            <h3>Dolce</h3>
+                            <p>il dolce ti aspetta</p>
+                            <a href="quiz.php?portata=dolce">Inizia la prova</a>
+
+                        <?php endif; ?>
+
+                        </div>
+
+                        <?php endif; ?>
 
             </div>
         </section>
