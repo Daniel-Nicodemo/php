@@ -29,7 +29,7 @@ if ($gia_votato) {
         <h1>🚨 VERDETTO FINALE 🚨</h1>
         <p>Attenzione: una volta inviata, l'accusa non potrà essere modificata.</p>
 
-        <form action="salva_accusa.php" method="POST" class="form-accusa">
+        <form action="grazie-investigatore.php" method="POST" class="form-accusa">
             
             <label>Chi è l'assassino?</label>
             <select name="colpevole" required>
