@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+include "db.php";
+
+
+    if($colpevole === true){
+
+
+    }
+
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +19,6 @@
     <title>Document</title>
 </head>
 <body>
-    Grazie per aver inviato l'accusa.
+    
 </body>
 </html>

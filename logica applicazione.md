@@ -25,4 +25,6 @@ Fa tantissime cose:
 
 5. gestione della risposta
 
+cose da fare:
 
+finire la pagina salva accusa

@@ -23,7 +23,7 @@ if ($gia_votato) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'Accusa Finale</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="pico-main/css/pico.min.css"> </head>
 <body>
     <div class="container">
         <h1>🚨 VERDETTO FINALE 🚨</h1>
