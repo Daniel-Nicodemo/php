@@ -25,6 +25,10 @@ Fa tantissime cose:
 
 5. gestione della risposta
 
-cose da fare:
+## grazie-investigatore.php
 
-finire la pagina salva accusa
+il file grazie-investigatore.php deve: 
+
+1) Riepilogare l'accusa fatta dall'investigatore
+2) Confrontare l'accusa con la soluzione del caso
+3) Mostrare un messaggio "hai indovinato" o "non hai indovinato", nel caso non abbia indovinato fa ricominciare il gioco

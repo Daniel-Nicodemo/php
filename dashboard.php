@@ -183,9 +183,9 @@ $etichette = [
     </main>
 
     <!-- Classifica: appare quando almeno un tavolo ha votato -->
-    <div id="box-classifica"></div>
+    <!-- <div id="box-classifica"></div> -->
 
-    <script>
+    <!-- <script>
         function controllaClassifica() {
             fetch('check_status.php')
                 .then(response => response.json())
@@ -201,7 +201,7 @@ $etichette = [
         }
 
         setInterval(controllaClassifica, 10000);
-    </script>
+    </script> -->
 
 </body>
 </html>
