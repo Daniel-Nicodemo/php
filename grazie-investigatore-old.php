@@ -12,7 +12,6 @@ $sbloccati = $stmt->fetchAll(PDO::FETCH_COLUMN);
 } catch {
 
 
-
 }
 
 ?>

@@ -34,7 +34,8 @@ $etichette = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Investigativa</title>
-    <link rel="stylesheet" href="pico-main/css/pico.min.css">
+    <!-- <link rel="stylesheet" href="pico-main/css/pico.min.css"> -->
+    <link rel="stylesheet" href="statistiche.css">
 </head>
 <body>
 
@@ -111,7 +112,7 @@ $etichette = [
                         <?php else: ?>
 
                             <h3>Primo piatto</h3>
-                            <p>il secondo enigma ti attende</p>
+                            <p>Il secondo enigma ti attende</p>
                             <a href="quiz.php?portata=primo">Inizia la prova</a>
 
                         <?php endif; ?>
@@ -134,7 +135,7 @@ $etichette = [
                         <?php else: ?>
 
                             <h3>Secondo piatto</h3>
-                            <p>il terzo enigma ti attende</p>
+                            <p>Il terzo piatto sta per essere servito, preparati:</p>
                             <a href="quiz.php?portata=secondo">Inizia la prova</a>
 
                         <?php endif; ?>
@@ -159,7 +160,7 @@ $etichette = [
                         <?php else: ?>
 
                             <h3>Dolce</h3>
-                            <p>il dolce ti aspetta</p>
+                            <p>Il dolce ti aspetta</p>
                             <a href="quiz.php?portata=dolce">Inizia la prova</a>
 
                         <?php endif; ?>

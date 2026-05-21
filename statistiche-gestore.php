@@ -16,6 +16,15 @@ $tavoli_totali = $stmt->fetchColumn();
 $stmt = $pdo->query("SELECT COUNT(*) FROM progressi_gioco WHERE indizio_chiave = 'antipasto'");
 $antipasto = $stmt->fetchColumn();
 
+$stmt = $pdo->query("SELECT COUNT(*) FROM progressi_gioco WHERE indizio_chiave = 'primo'");
+$primo = $stmt->fetchColumn();
+
+$stmt = $pdo->query("SELECT COUNT(*) FROM progressi_gioco WHERE indizio_chiave = 'secondo'");
+$secondo = $stmt->fetchColumn();
+
+$stmt = $pdo->query("SELECT COUNT(*) FROM progressi_gioco WHERE indizio_chiave = 'dolce'");
+$dolce = $stmt->fetchColumn();
+
 ?>
 
 <!DOCTYPE html>
@@ -23,23 +32,8 @@ $antipasto = $stmt->fetchColumn();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="statistiche.css">
     <title>Statistiche Gestore</title>
-    <style>
-        
-        .bar-container {
-            background: #333;
-            border-radius: 4px;
-            height: 20px;
-            width: 100%;
-            margin-top: 4px;
-        }
-        .bar {
-            background: #ff4d4d;
-            height: 20px;
-            border-radius: 4px;
-        }
-        
-    </style>
 </head>
 <body>
 
@@ -49,13 +43,13 @@ $antipasto = $stmt->fetchColumn();
     <h2>Riepilogo</h2>
 
     <div class="stat-box">
-        <p>Investigatori che hanno completato il gioco:</p>
+        <p><strong>Investigatori che hanno completato il gioco:</strong></p>
         <span><?= $tavoli_completato ?></span>
     </div>
-
+    <br>
     <!-- SEZIONE 2: Riepilogo numerico -->
     <div class="stat-box">
-        <p>Investigatori che sono ancora in gioco:</p>
+        <p><strong>Investigatori che sono ancora in gioco:</strong></p>
         <span><?= $tavoli_totali ?></span>
     </div>
 
@@ -63,7 +57,7 @@ $antipasto = $stmt->fetchColumn();
     <h2>Progressi Antipasto</h2>
 
     <div class="stat-box">
-        <p>Investigatori che hanno sbloccato l'antipasto</p>
+        <p>Investigatori che hanno sbloccato l'antipasto:</p>
         <span class="numero"><?= $antipasto ?> / <?= $tavoli_totali ?></span>
         
         <div class="bar-container">
@@ -72,6 +66,42 @@ $antipasto = $stmt->fetchColumn();
         </div>
     </div>
 
+    <h2>Progressi Primo</h2>
+
+        <div class="stat-box">
+            <p>Investigatori che hanno sbloccato il primo piatto:</p>
+            <span class="numero"><?= $primo ?> / <?= $tavoli_totali ?></span>
+        
+        <div class="bar-container">
+            <div class="bar" style="width: <?= ($tavoli_totali > 0) ? ($primo / $tavoli_totali * 100) :  0?>%"></div>
+
+        </div>
+    </div>
+
+
+    <h2>Progressi Secondo</h2>
+
+        <div class="stat-box">
+            <p>Investigatori che hanno sbloccato il secondo piatto:</p>
+            <span class="numero"><?= $secondo ?> / <?= $tavoli_totali ?></span>
+        
+        <div class="bar-container">
+            <div class="bar" style="width: <?= ($tavoli_totali > 0) ? ($secondo / $tavoli_totali * 100) :  0?>%"></div>
+
+        </div>
+    </div>
+
+    <h2>Progressi Dolce</h2>
+
+        <div class="stat-box">
+            <p>Investigatori che hanno sbloccato il dolce:</p>
+            <span class="numero"><?= $dolce ?> / <?= $tavoli_totali ?></span>
+        
+        <div class="bar-container">
+            <div class="bar" style="width: <?= ($tavoli_totali > 0) ? ($dolce / $tavoli_totali * 100) :  0?>%"></div>
+
+        </div>
+    </div>
 
 </body>
 </html>

@@ -1,0 +1,275 @@
+/* ==========================================================================
+   PALETTE COLORI & SETUP GENERALE (Tema Noir / Investigativo)
+   ========================================================================== */
+:root {
+    --bg-dark: #121214;        /* Sfondo principale scuro */
+    --bg-card: #1e1e24;        /* Sfondo delle schede e dei box */
+    --text-light: #e0e0e6;     /* Testo principale */
+    --text-muted: #a0a0aa;     /* Testo secondario / note */
+    --primary-gold: #dfb15b;   /* Giallo investigativo / Oro per evidenze */
+    --blood-red: #9e1b1b;      /* Rosso delitto per errori e pulsanti importanti */
+    --blood-red-hover: #bd2626;
+    --success-green: #276f41;  /* Verde per successo / caso risolto */
+    --border-color: #2d2d35;   /* Bordi divisori */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Courier New', Courier, monospace; /* Richiama la macchina da scrivere */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container principale centrato */
+.container, main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   TIPOGRAFIA & TITOLI
+   ========================================================================== */
+h1, h2, h3 {
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif; /* Stile più classico/retrò per i titoli */
+}
+
+h1 {
+    text-align: center;
+    border-bottom: 2px dashed var(--primary-gold);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed var(--border-color);
+    margin: 25px 0;
+}
+
+/* ==========================================================================
+   ELEMENTI DELLA STRUTTURA (Copione, Card, Indizi)
+   ========================================================================== */
+/* Il Prologo / Introduzione (Index.php) */
+.copione {
+    background-color: var(--bg-card);
+    border-left: 4px solid var(--primary-gold);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.identita {
+    font-size: 1.1rem;
+    background: #2a2a32;
+    padding: 10px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Taccuino & Liste Indizi (Dashboard.php) */
+.clue-list {
+    margin-bottom: 30px;
+}
+
+.clue-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.clue-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-gold);
+}
+
+/* ==========================================================================
+   PULSANTI (Bottoni d'azione)
+   ========================================================================== */
+.btn, button[type="submit"], .back-link, .btn-accusa {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-gold);
+    color: #121214;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 10px;
+    font-family: inherit;
+}
+
+.btn:hover, button[type="submit"]:hover {
+    background-color: #f7ca6d;
+}
+
+/* Bottone Accusa Finale - Deve risaltare (Rosso Sangue) */
+.btn-accusa {
+    background-color: var(--blood-red);
+    color: #ffffff;
+    font-size: 1.2rem;
+    border: 2px solid #ff4d4d;
+    animation: pulse 2s infinite; /* Effetto lampeggiante per attirare attenzione */
+}
+
+.btn-accusa:hover {
+    background-color: var(--blood-red-hover);
+    color: #ffffff;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); box-shadow: 0 0 15px rgba(158, 27, 27, 0.6); }
+    100% { transform: scale(1); }
+}
+
+/* ==========================================================================
+   FORM & QUIZ (Quiz.php e Accusa.php)
+   ========================================================================== */
+.quiz-card, .form-accusa {
+    background-color: var(--bg-card);
+    padding: 25px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.quiz-domanda {
+    font-size: 1.2rem;
+    color: var(--primary-gold);
+    margin-bottom: 20px;
+}
+
+/* Opzioni Radio Button allineate verticalmente e cliccabili */
+.quiz-opzioni label, .form-accusa label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+label.opzione {
+    background: #25252c;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background 0.2s;
+}
+
+label.opzione:hover {
+    background: #2d2d38;
+    border-color: var(--primary-gold);
+}
+
+label.opzione input[type="radio"] {
+    margin-right: 10px;
+    accent-color: var(--primary-gold); /* Colora il pallino di selezione */
+}
+
+/* Input Select e Textarea (per l'accusa) */
+.form-accusa select, .form-accusa textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #121214;
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    border-radius: 4px;
+    font-family: inherit;
+    margin-bottom: 20px;
+}
+
+.form-accusa select:focus, .form-accusa textarea:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+}
+
+.alert {
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.alert-success {
+    background-color: var(--success-green);
+    border: 1px solid #3fa45e;
+}
+
+.alert-error, .alert-danger {
+    background-color: var(--blood-red);
+    border: 1px solid #cc3333;
+}
+
+.alert h2 {
+    color: #fff;
+    border: none;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.stat-box {
+    background-color: var(--bg-card);
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.numero {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-gold);
+    display: block;
+    margin: 5px 0 10px 0;
+}
+
+/* Barra di avanzamento */
+.bar-container {
+    background-color: #121214;
+    border-radius: 10px;
+    overflow: hidden; /*specifica cosa dovrebbe accadere se il contenuto esce fuori dal contenitore in un elemento*/
+    height: 12px;
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+.bar {
+    background-color: var(--primary-gold);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out; /*Consentono di modificare i valori delle proprietà*/
+}
+
+h2:nth-of-type(4) + .stat-box .bar {
+    background-color: var(--blood-red); /*Imposta il colore dell'elemento*/
+}

