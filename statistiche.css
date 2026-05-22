@@ -1,53 +1,51 @@
-/* ==========================================================================
-   PALETTE COLORI & SETUP GENERALE (Tema Noir / Investigativo)
-   ========================================================================== */
 :root {
-    --bg-dark: #121214;        /* Sfondo principale scuro */
-    --bg-card: #1e1e24;        /* Sfondo delle schede e dei box */
-    --text-light: #e0e0e6;     /* Testo principale */
-    --text-muted: #a0a0aa;     /* Testo secondario / note */
-    --primary-gold: #dfb15b;   /* Giallo investigativo / Oro per evidenze */
-    --blood-red: #9e1b1b;      /* Rosso delitto per errori e pulsanti importanti */
+    --bg-dark: #121214;
+    --bg-card: #1e1e24;
+    --text-light: #e0e0e6;
+    --text-muted: #a0a0aa;
+    --primary-gold: #dfb15b;
+    --blood-red: #9e1b1b;
     --blood-red-hover: #bd2626;
-    --success-green: #276f41;  /* Verde per successo / caso risolto */
-    --border-color: #2d2d35;   /* Bordi divisori */
+    --success-green: #276f41;
+    --border-color: #2d2d35;
 }
 
+/* [data-theme="light"],
+:root:not([data-theme="dark"]) {
+ ...
+} */
+
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /*box-sizing definisce come calcolare la larghezza e la altezza di un elemento*/
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-dark); /*imposta il colore del background*/
     color: var(--text-light);
-    font-family: 'Courier New', Courier, monospace; /* Richiama la macchina da scrivere */
-    line-height: 1.6;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6; /*specifica l'altezza di una linea*/
     padding: 20px;
 }
 
-/* Container principale centrato */
 .container, main {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* ==========================================================================
-   TIPOGRAFIA & TITOLI
-   ========================================================================== */
 h1, h2, h3 {
     color: var(--primary-gold);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    text-transform: uppercase; /*trasforma il testo in maiuscolo*/
+    letter-spacing: 1px; /*Aumenta o diminuisce lo spazio tra caratteri in un testo*/
     margin-bottom: 15px;
     font-family: 'Georgia', serif; /* Stile più classico/retrò per i titoli */
 }
 
 h1 {
     text-align: center;
-    border-bottom: 2px dashed var(--primary-gold);
+    border-bottom: 2px dashed var(--primary-gold); /*var e una funzione che serve per inserire un valore nella variabile css*/ /*dashed specifica un bordo tratteggiato*/
     padding-bottom: 15px;
     margin-bottom: 30px;
     font-size: 2.2rem;
@@ -64,21 +62,20 @@ p {
 
 hr {
     border: 0;
-    border-top: 1px dashed var(--border-color);
+    border-top: 1px dashed var(--border-color); /*dashed specifica un bordo tratteggiato*/
     margin: 25px 0;
 }
 
 /* ==========================================================================
-   ELEMENTI DELLA STRUTTURA (Copione, Card, Indizi)
+   Struttura (Copione, Card, Indizi)
    ========================================================================== */
-/* Il Prologo / Introduzione (Index.php) */
 .copione {
     background-color: var(--bg-card);
     border-left: 4px solid var(--primary-gold);
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 4px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4); /*attacca una o più ombreggiature all'elemento*/
 }
 
 .identita {
@@ -89,7 +86,6 @@ hr {
     display: inline-block;
 }
 
-/* Taccuino & Liste Indizi (Dashboard.php) */
 .clue-list {
     margin-bottom: 30px;
 }
@@ -97,20 +93,21 @@ hr {
 .clue-card {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 20px;
-    margin-bottom: 15px;
+    width: 100%;
+    margin-bottom: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease; /*transition ti permette di cambiare la proprietà del valore*/
 }
 
 .clue-card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px); /*transform crea effetti di trasformazione */
     border-color: var(--primary-gold);
 }
 
 /* ==========================================================================
-   PULSANTI (Bottoni d'azione)
+   Tutti i bottoni che si vanno a premere (Bottoni d'azione)
    ========================================================================== */
 .btn, button[type="submit"], .back-link, .btn-accusa {
     display: inline-block;
@@ -122,26 +119,28 @@ hr {
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    text-decoration: none;
+    text-decoration: none; /*Decora l'aspetto delle linee nel testo*/
     border: none;
     border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.2s ease;
+    cursor: pointer; /*specifica il cursore del mouse quando punta su un elemento*/
+    transition: background 0.2s ease; /*transition ti permette di cambiare la proprietà del valore*/
     margin-top: 10px;
     font-family: inherit;
 }
+
+/*button[type="submit"] e un tag html convertito in css*/
 
 .btn:hover, button[type="submit"]:hover {
     background-color: #f7ca6d;
 }
 
-/* Bottone Accusa Finale - Deve risaltare (Rosso Sangue) */
+/*Bottone formula accusa finale*/
 .btn-accusa {
     background-color: var(--blood-red);
     color: #ffffff;
     font-size: 1.2rem;
     border: 2px solid #ff4d4d;
-    animation: pulse 2s infinite; /* Effetto lampeggiante per attirare attenzione */
+    animation: pulse 2s infinite; /*animation permette di usare una animazione su un elemento HTML */
 }
 
 .btn-accusa:hover {
@@ -149,14 +148,8 @@ hr {
     color: #ffffff;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.02); box-shadow: 0 0 15px rgba(158, 27, 27, 0.6); }
-    100% { transform: scale(1); }
-}
-
 /* ==========================================================================
-   FORM & QUIZ (Quiz.php e Accusa.php)
+   Css per quiz.php e per accusa.php
    ========================================================================== */
 .quiz-card, .form-accusa {
     background-color: var(--bg-card);
@@ -182,9 +175,9 @@ label.opzione {
     background: #25252c;
     padding: 12px;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: pointer; /*specifica il cursore del mouse quando punta su un elemento*/
     border: 1px solid transparent;
-    transition: background 0.2s;
+    transition: background 0.2s; /*transition ti permette di cambiare la proprietà del valore*/
 }
 
 label.opzione:hover {
@@ -194,10 +187,10 @@ label.opzione:hover {
 
 label.opzione input[type="radio"] {
     margin-right: 10px;
-    accent-color: var(--primary-gold); /* Colora il pallino di selezione */
+    accent-color: var(--primary-gold); /* specifica il colore dell'accento per i controlli di interfaccia */
 }
 
-/* Input Select e Textarea (per l'accusa) */
+/* Selezione e la textarea */
 .form-accusa select, .form-accusa textarea {
     width: 100%;
     padding: 10px;
@@ -210,7 +203,7 @@ label.opzione input[type="radio"] {
 }
 
 .form-accusa select:focus, .form-accusa textarea:focus {
-    outline: none;
+    outline: none; /*outline e la linea che viene tracciata intorno agli elementi*/
     border-color: var(--primary-gold);
 }
 
@@ -253,7 +246,7 @@ label.opzione input[type="radio"] {
     margin: 5px 0 10px 0;
 }
 
-/* Barra di avanzamento */
+/* Barra in statistiche-gestore.php */
 .bar-container {
     background-color: #121214;
     border-radius: 10px;
@@ -265,7 +258,7 @@ label.opzione input[type="radio"] {
 
 .bar {
     background-color: var(--primary-gold);
-    height: 100%;
+    height: 50%;
     border-radius: 10px;
     transition: width 0.5s ease-in-out; /*Consentono di modificare i valori delle proprietà*/
 }

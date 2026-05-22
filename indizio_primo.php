@@ -30,6 +30,7 @@ if (!$sbloccato) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indizio: <?php echo ucfirst($chiave_indizio); ?></title>
+    <link rel="stylesheet" href="pico-main/css/pico.min.css">
     <link rel="stylesheet" href="statistiche.css">
 </head>
 <body class="clue-page">
@@ -44,13 +45,14 @@ if (!$sbloccato) {
             <h2>Indizio Primo</h2>
             <hr>
             <p>
-                bla, bla bla
+                La Contessa erediterà una grande fortuna.
+                Carla ha perso soldi al gioco e ha bisogno di denaro.
+                La dottoressa aveva in cura il Conte ma falsificava ricette.
+                La Cameriera era stata sorpresa a curiosare nello studio del padrone.
+                Anastasia passava molto tempo al fianco del conte ed era la sua consigliera.
+                Alfred aveva un grosso debito in sospeso col Conte.
             </p>
  
-            
-            <div class="clue-image">
-                <img src="images/referto_medico.jpg" alt="Referto" style="max-width: 100%;">
-            </div>
         </main>
     </div>
 

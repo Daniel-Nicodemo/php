@@ -32,6 +32,7 @@ $dolce = $stmt->fetchColumn();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pico-main/css/pico.min.css">
     <link rel="stylesheet" href="statistiche.css">
     <title>Statistiche Gestore</title>
 </head>

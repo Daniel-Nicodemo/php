@@ -23,7 +23,8 @@ if ($gia_votato) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'Accusa Finale</title>
-    <link rel="stylesheet" href="statistiche.css"> 
+    <link rel="stylesheet" href="pico-main/css/pico.min.css">
+    <link rel="stylesheet" href="statistiche.css">
 </head>
 <body>
     <div class="container">
@@ -35,10 +36,12 @@ if ($gia_votato) {
             <label>Chi è l'assassino?</label>
             <select name="colpevole" required>
                 <option value="">-- Seleziona il sospettato --</option>
-                <option value="Elena">Elena (La Vedova Nera)</option>
-                <option value="Marco">Marco (L'Assistente)</option>
-                <option value="Dott. Neri">Il Dott. Neri (Il Collezionista)</option>
-                <option value="Sofia">Sofia (La Cameriera)</option>
+                <option value="Contessa Isabella">Contessa Isabella (la moglie, elegante e fredda). </option>
+                <option value="Carla">Carla (la figlia ribelle, amante del gioco d'azzardo). </option>
+                <option value="Dott. ssa Bianchi">Dott. ssa Bianchi (medico di famiglia, legato a debiti e segreti). </option>
+                <option value="Lucia">Cameriera Lucia (serva fedele, ma troppo curiosa). </option>
+                <option value="Maggiordomo">Il Maggiordomo (può essere il narratore/conduttore della serata). </option>
+                <option value="Anastasia">Anastasia (amica di famiglia, confidente del conte)  </option>
             </select>
 
             <label>Qual è l'arma del delitto?</label>

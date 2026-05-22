@@ -30,6 +30,7 @@ if (!$sbloccato) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indizio: <?php echo ucfirst($chiave_indizio); ?></title>
+    <link rel="stylesheet" href="pico-main/css/pico.min.css">
     <link rel="stylesheet" href="statistiche.css">
 </head>
 <body class="clue-page">
@@ -44,15 +45,8 @@ if (!$sbloccato) {
             <h2>Indizio Dolce</h2>
             <hr>
             <p>
-                Testo per indizio dolce.
+                “Il veleno è stato sciolto nel bicchiere del Conte poco prima del brindisi. Solo chi era accanto a lui in quel momento poteva riuscirci.”
             </p>
-            <p>
-                <em>Nota dell'investigatore:</em> La cuoca ha dichiarato di non aver usato mandorle nella cena. Qualcuno sta mentendo?
-            </p>
-            
-            <div class="clue-image">
-                <img src="images/referto_medico.jpg" alt="Referto" style="max-width: 100%;">
-            </div>
         </main>
     </div>
 
