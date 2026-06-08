@@ -1,6 +1,6 @@
 <?php
-session_start();
 include 'db.php';
+session_start();
 
 if (!isset($_SESSION['tavolo_id'])) {
     header("Location: index.php");
@@ -40,15 +40,15 @@ $etichette = [
 <body>
 
     <header>
-        <h1>🕵️ Taccuino: <?= htmlspecialchars($tavolo) ?></h1>
+        <h1 style="font-size: 2.5em;">🕵️ Taccuino: <?= htmlspecialchars($tavolo) ?></h1>
     </header>
 
-    <main>
+    <main style=" max-width: 1300px !important;">
 
         <!-- SEZIONE 1: Indizi raccolti -->
 
         <section class="clue-list">
-            <h2>Indizi Raccolti</h2>
+            <h2 style="font-size: 2em;">Indizi Raccolti</h2>
 
             <?php if (empty($sbloccati)): ?>
                 <div class="alert">

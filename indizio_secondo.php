@@ -1,7 +1,6 @@
-
 <?php
+include 'db.php'; // La tua connessione PDO semplice
 session_start();
-require_once 'db.php'; // La tua connessione PDO semplice
 
 // 1. Sicurezza: Se non c'è una sessione, riportalo all'inizio
 if (!isset($_SESSION['tavolo_id'])) {
@@ -38,17 +37,16 @@ if (!$sbloccato) {
     <div class="clue-container">
         <nav class="clue-nav">
             <a href="dashboard.php" class="back-link">⬅ Torna al Taccuino</a>
-            <span class="clue-title">Fascicolo: <?php echo strtoupper($chiave_indizio); ?></span>
         </nav>
 
         <main class="clue-content">
             <h2>Indizio Secondo</h2>
             <hr>
-            <p>
-                Una lettera anonima minaccia il Conte (“Se non paghi, pagherai con la vita”).
-                Una fiala di veleno trovata nella dispensa.
-                Una chiave arrugginita
-            </p>
+            <ul>
+                <li>Una lettera anonima minaccia il Conte (“Se non paghi, pagherai con la vita”).</li>
+                <li>Una fiala di veleno trovata nella dispensa.</li>
+                <li>Una chiave arrugginita</li>
+            </ul>
         </main>
     </div>
 

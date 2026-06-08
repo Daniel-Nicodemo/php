@@ -1,7 +1,6 @@
-
 <?php
-session_start();
 include 'db.php';
+session_start();
 
 if (!isset($_SESSION['tavolo_id'])) { header("Location: index.php"); exit; }
 
@@ -13,7 +12,11 @@ $check->execute([$tavolo_id]);
 $gia_votato = $check->fetch();
 
 if ($gia_votato) {
-    die("<h1>Accusa già registrata.</h1><p>Il verdetto è nelle mani della giustizia. Non puoi più tornare indietro!</p><a href='dashboard.php'>Torna alla dashboard</a>");
+    die("
+    <link rel='stylesheet' href='pico-main/css/pico.min.css'>
+    <link rel='stylesheet' href='statistiche.css'>
+    <h1>Accusa già registrata.</h1><p>Il verdetto è nelle mani della giustizia. Non puoi più tornare indietro!</p><a href='dashboard.php'>Torna alla dashboard</a>
+    ");
 }
 ?>
 
@@ -36,20 +39,21 @@ if ($gia_votato) {
             <label>Chi è l'assassino?</label>
             <select name="colpevole" required>
                 <option value="">-- Seleziona il sospettato --</option>
-                <option value="Contessa Isabella">Contessa Isabella (la moglie, elegante e fredda). </option>
-                <option value="Carla">Carla (la figlia ribelle, amante del gioco d'azzardo). </option>
-                <option value="Dott. ssa Bianchi">Dott. ssa Bianchi (medico di famiglia, legato a debiti e segreti). </option>
-                <option value="Lucia">Cameriera Lucia (serva fedele, ma troppo curiosa). </option>
-                <option value="Maggiordomo">Il Maggiordomo (può essere il narratore/conduttore della serata). </option>
-                <option value="Anastasia">Anastasia (amica di famiglia, confidente del conte)  </option>
+                <option value="Contessa Isabella">Contessa Isabella</option>
+                <option value="Carla">Carla</option>
+                <option value="Dott. ssa Bianchi">Dott. ssa Bianchi</option>
+                <option value="Lucia">Cameriera Lucia</option>
+                <option value="Maggiordomo">Il Maggiordomo</option>
+                <option value="Anastasia">Anastasia</option>
             </select>
 
             <label>Qual è l'arma del delitto?</label>
             <select name="arma" required>
                 <option value="">-- Seleziona l'arma --</option>
                 <option value="Veleno">Veleno nel bicchiere</option>
-                 tagliacarte">Il tagliacarte nello studio</option>
+                <option value="tagliacarte">Il tagliacarte nello studio</option>
                 <option value="Cuscino">Soffocamento con cuscino</option>
+                <option value="pistola">Pistola sotto la tavola</option>
             </select>
 
             <label>Descrivi il movente (Perché lo ha fatto?):</label>

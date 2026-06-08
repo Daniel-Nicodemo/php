@@ -1,7 +1,6 @@
-
 <?php
-session_start();
 include 'db.php';
+session_start();
 
 // Verifichiamo che il tavolo sia identificato
 if (!isset($_SESSION['tavolo_id'])) {

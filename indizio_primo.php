@@ -1,7 +1,6 @@
-
 <?php
+include 'db.php'; // La tua connessione PDO semplice
 session_start();
-require_once 'db.php'; // La tua connessione PDO semplice
 
 // 1. Sicurezza: Se non c'è una sessione, riportalo all'inizio
 if (!isset($_SESSION['tavolo_id'])) {
@@ -38,20 +37,19 @@ if (!$sbloccato) {
     <div class="clue-container">
         <nav class="clue-nav">
             <a href="dashboard.php" class="back-link">⬅ Torna al Taccuino</a>
-            <span class="clue-title">Fascicolo: <?php echo strtoupper($chiave_indizio); ?></span>
         </nav>
 
         <main class="clue-content">
             <h2>Indizio Primo</h2>
             <hr>
-            <p>
-                La Contessa erediterà una grande fortuna.
-                Carla ha perso soldi al gioco e ha bisogno di denaro.
-                La dottoressa aveva in cura il Conte ma falsificava ricette.
-                La Cameriera era stata sorpresa a curiosare nello studio del padrone.
-                Anastasia passava molto tempo al fianco del conte ed era la sua consigliera.
-                Alfred aveva un grosso debito in sospeso col Conte.
-            </p>
+            <ul>
+                <li>La Contessa erediterà una grande fortuna.</li>
+                <li>Carla ha perso soldi al gioco e ha bisogno di denaro.</li>
+                <li>La dottoressa aveva in cura il Conte ma falsificava ricette.</li>
+                <li>La Cameriera era stata sorpresa a curiosare nello studio del padrone.</li>
+                <li>Anastasia passava molto tempo al fianco del conte ed era la sua consigliera.</li>
+                <li>Alfred aveva un grosso debito in sospeso col Conte.</li>
+            </ul>
  
         </main>
     </div>

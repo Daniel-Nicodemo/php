@@ -3,7 +3,7 @@
 include 'db.php';
 
 
-$colpevole_reale = 'Elena';
+$colpevole_reale = 'Contessa Isabella';
 $arma_reale = 'Veleno';
 
 try{

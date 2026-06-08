@@ -1,7 +1,7 @@
 <?php
 
-session_start();
 include "db.php";
+session_start();
 
 if(!isset($_SESSION['tavolo_id'])){
 
@@ -9,7 +9,7 @@ if(!isset($_SESSION['tavolo_id'])){
     exit;
 }
 
-$colpevole_reale = "Elena";
+$colpevole_reale = "Contessa Isabella";
 $arma_reale = "Veleno";
 
 $tavolo_id = $_SESSION['tavolo_id'];

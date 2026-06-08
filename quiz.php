@@ -284,8 +284,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         <nav>
             <a href="dashboard.php" class="back-link">⬅ Torna al Taccuino</a>
         </nav>
+        <br>
 
-        <h1>🍽️ Prova dell'<?= $etichetta_portata ?></h1>
+        <h1>🍽️ Prova dell'<?=$etichetta_portata ?></h1>
         <p>Rispondi correttamente per sbloccare il prossimo indizio.</p>
 
         <?php if ($feedback): ?>
